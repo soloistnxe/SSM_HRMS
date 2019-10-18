@@ -37,21 +37,21 @@ public class JsonMsg {
         this.extendInfo = extendInfo;
     }
 
-    public static JsonMsg success(){
+    public static JsonMsg success() {
         JsonMsg res = new JsonMsg();
         res.setCode(100);
         res.setMsg("操作成功！");
         return res;
     }
 
-    public static JsonMsg fail(){
+    public static JsonMsg fail() {
         JsonMsg res = new JsonMsg();
         res.setCode(200);
         res.setMsg("操作失败！");
         return res;
     }
 
-    public JsonMsg addInfo(String key, Object obj){
+    public JsonMsg addInfo(String key, Object obj) {
         this.extendInfo.put(key, obj);
         return this;
     }

@@ -16,30 +16,38 @@ public class DepartmentService {
     @Autowired
     DepartmentMapper departmentMapper;
 
-    public int deleteDeptById(Integer deptId){
+    public int deleteDeptById(Integer deptId) {
         return departmentMapper.deleteDeptById(deptId);
     }
-    public int updateDeptById(Integer deptId, Department department){
+
+    public int updateDeptById(Integer deptId, Department department) {
         return departmentMapper.updateDeptById(deptId, department);
     }
-    public int addDept(Department department){
+
+    public int addDept(Department department) {
         return departmentMapper.insertDept(department);
     }
-    public int getDeptCount(){
+
+    public int getDeptCount() {
         return departmentMapper.countDepts();
     }
-    public List<Department> getDeptList(Integer offset, Integer limit){
+
+    public List<Department> getDeptList(Integer offset, Integer limit) {
         return departmentMapper.selectDeptsByLimitAndOffset(offset, limit);
-    };
-    public Department getDeptById(Integer deptId){
+    }
+
+    ;
+
+    public Department getDeptById(Integer deptId) {
         return departmentMapper.selectOneById(deptId);
     }
-    public Department getDeptByName(String deptName){
+
+    public Department getDeptByName(String deptName) {
         return departmentMapper.selectOneByName(deptName);
     }
 
 
-    public List<Department> getDeptName(){
+    public List<Department> getDeptName() {
         return departmentMapper.selectDeptList();
     }
 
